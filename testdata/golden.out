@@ -1,0 +1,40 @@
+VARIABLE     DESCRIPTION         VALUE
+APPEND       Append A            1 2 3 4 5 6
+FIRST        First comment wins  third
+OVERRIDE_A   Override A          1 2 3 4 5 6
+OVERRIDE_B   Override B          2 3 4 5 6
+OVERRIDE_C   Override C          3 4 5 6
+OVERRIDE_D   Override D          4 5 6
+OVERRIDE_E   Override E          5 6
+OVERRIDE_F   Override F          6
+OVERRIDE_G   Override G
+OVERRIDE_H   Override H
+RECURSIVE_A  Recursive A         1 2 3 4 5 6
+RECURSIVE_B  Recursive B         2 3 4 5 6
+RECURSIVE_C  Recursive C         3 4 5 6
+RECURSIVE_D  Recursive D         4 5 6
+RECURSIVE_E  Recursive E         5 6
+RECURSIVE_F  Recursive F         6
+RECURSIVE_G  Recursive G
+RECURSIVE_H  Recursive H
+SECOND       Other variable
+SIMPLE_A     Simple A            1
+SIMPLE_B     Simple B            2 1
+SIMPLE_C     Simple C            3 2 1
+SIMPLE_D     Simple D            4 3 2 1
+SIMPLE_E     Simple E            5 4 3 2 1
+SIMPLE_F     Simple F            6 5 4 3 2 1
+SIMPLE_G     Simple G
+SIMPLE_H     Simple H
+
+TARGET          DESCRIPTION
+$(APPEND)       Variable targets (which may be multiple targets)
+all             Compile the entire program
+check           Verify `make help` matches `golden.out`
+double_colon_A  Double-colon A
+double_colon_B  Double-colon B
+double_colon_C  Double-colon C
+double_colon_D  Double-colon D
+help            This list of useful make variables & targets
+install         Install the executables
+uninstall       Uninstall the executables
