@@ -30,7 +30,6 @@ SIMPLE_H     Simple H
 TARGET          DESCRIPTION
 $(APPEND)       Variable targets (which may be multiple targets)
 all             Compile the entire program
-check           Verify `make help` matches `golden.out`
 double_colon_A  Double-colon A
 double_colon_B  Double-colon B
 double_colon_C  Double-colon C

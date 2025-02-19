@@ -21,4 +21,4 @@ jobs:
       - name: Check Golden
         run: |
           cd testdata
-          make check
+          make help | git diff --no-index --ignore-space-at-eol --exit-code -- golden.out -
