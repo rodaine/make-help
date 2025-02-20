@@ -9,7 +9,7 @@ help_variables: $(eval ECHO=$(shell \
 		$(MAKEFILE_LIST) \
 	| awk '!x[$$1]++' \
 	| sort -d \
-	| awk 'FNR==1{$$0="VARIABLE	DESCRIPTION	VALUE\n"$$0} 1' \
+	| { echo 'VARIABLE	DESCRIPTION	VALUE'; cat; } \
 	| column -t -s'	' \
 	| tr '\n' '\1'))
 	@ echo "$(ECHO)" | tr '\1' '\n'
@@ -21,5 +21,5 @@ help_targets:
 			$(MAKEFILE_LIST) \
 		| awk '!x[$$1]++' \
 		| sort -d \
-		| awk 'FNR==1{$$0="TARGET	DESCRIPTION\n"$$0} 1' \
+		| { echo 'TARGET	DESCRIPTION'; cat; } \
 		| column -t -s'	'
